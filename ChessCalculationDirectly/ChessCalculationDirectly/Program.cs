@@ -10,6 +10,16 @@ namespace ChessCalculationDirectly
     {
         static void Main(string[] args)
         {
+            int DeskSize = 3;
+
+            for (int LocalDeskSize = 0; LocalDeskSize < DeskSize; LocalDeskSize++)
+            {
+                int[] Permutation = new int[LocalDeskSize];
+                for (int i = 0; i < LocalDeskSize; i++)
+                {
+
+                }
+            }
         }
     }
 }
