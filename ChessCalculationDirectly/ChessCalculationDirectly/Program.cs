@@ -10,16 +10,44 @@ namespace ChessCalculationDirectly
     {
         static void Main(string[] args)
         {
-            int DeskSize = 3;
+            int DeskSize = GetDeskSize();
 
-            for (int LocalDeskSize = 0; LocalDeskSize < DeskSize; LocalDeskSize++)
+            int[] NewLine = new int[DeskSize];
+            NewLine = GetNewLine(DeskSize);
+
+            ShowLine(NewLine);
+
+            int Element = ChooseAnElement(NewLine);
+            
+        }
+
+
+
+
+        static int GetDeskSize()
+        {
+            return 4;
+        }
+
+        static int[] GetNewLine(int DeskSize)
+        {
+            int[] Line = new int[DeskSize];
+            for (int i = 0; i < DeskSize; i++)
             {
-                int[] Permutation = new int[LocalDeskSize];
-                for (int i = 0; i < LocalDeskSize; i++)
-                {
-
-                }
+                Line[i] = i;
             }
+            return Line;
+        }
+
+        static void ShowLine(int[] Line)
+        {
+            for (int i = 0; i < Line.Length; i++)
+            {
+                Console.WriteLine(Line[i]);
+            }
+            Console.ReadLine();
         }
     }
 }
+
+
